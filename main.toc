@@ -1,0 +1,24 @@
+\contentsline {section}{\numberline {0.1}Purpose and Scope}{1}{section.0.1}%
+\contentsline {paragraph}{Scope Extension: Emerging Exploration Market}{1}{section.0.1}%
+\contentsline {chapter}{\numberline {1}Introduction: Why the Relevant Energy Range Changes with Mission Domain}{2}{chapter.1}%
+\contentsline {subsection}{\numberline {1.0.1}Characterising the Space Enviroment}{2}{subsection.1.0.1}%
+\contentsline {paragraph}{The Moon as emerging market}{3}{figure.caption.5}%
+\contentsline {section}{\numberline {1.1}Detector Technologies}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Silicon Telescope Systems}{6}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Pixel Detectors}{6}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Hybrid Silicon--Scintillator Systems}{6}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Dosimetry and LET Monitors}{6}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Miniaturisation Trends}{6}{subsection.1.1.5}%
+\contentsline {subsection}{\numberline {1.1.6}Key Technical Trade-offs}{7}{subsection.1.1.6}%
+\contentsline {chapter}{\numberline {2}Engineering Comparison and Selection Matrices}{8}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Heritage and Existing Instruments}{10}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Operational Markets and Mission Classes}{13}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Developments Since 2023}{14}{chapter.5}%
+\contentsline {paragraph}{Caution.}{15}{table.5.1}%
+\contentsline {chapter}{\numberline {6}Technology Gaps and Emerging Opportunities}{17}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusions}{19}{chapter.7}%
+\contentsline {chapter}{\numberline {A}Appendix}{20}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Orbit-Grouped Instrument Tables}{20}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Human-Exploration Detector Table}{20}{section.A.2}%
+\contentsline {section}{Source Documents and References}{22}{appendix*.17}%
+\contentsline {chapter}{\numberline {A}Detector Review Presentation}{24}{appendix.A}%

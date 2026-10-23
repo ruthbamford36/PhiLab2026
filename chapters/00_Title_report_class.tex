@@ -1,0 +1,61 @@
+% ============================================================================
+% Title page -- deliberately uses no floats and no \maketitle.
+% Designed to remain on one A4 page with the report document class.
+% ============================================================================
+\begin{titlepage}
+\thispagestyle{empty}
+\begingroup
+\centering
+
+% Top identity banner
+\IfFileExists{./Logos/RALSpaceLogoTitlePage.png}{%
+  \includegraphics[width=0.9\textwidth,keepaspectratio]{./Logos/RALSpaceLogoTitlePage.png}%
+}{UKRI/STFC}
+
+\vspace{8mm}
+
+{\LARGE\bfseries Update \\State of the Art Review of Space Radiation Monitors 2026\par}
+\vspace{3mm}
+{\large Heritage Systems, Miniaturisation and Emerging Cislunar Markets\par}
+
+\vspace{7mm}
+{\large Dr Ruth Bamford\par}
+\vspace{1mm}
+{\normalsize RAL Space\par}
+\vspace{3mm}
+{\normalsize August 5, 2026\par}
+
+\vfill
+
+% Approval table
+\ReportTableRows
+\begin{tabularx}{1.0\textwidth}{Y p{0.17\textwidth} Y p{0.17\textwidth}}
+\toprule
+\rowcolor{RALblue}
+\tablehead{Prepared by} & \tablehead{Signature/date} &
+\tablehead{Approved by} & \tablehead{Signature/date}\\
+\midrule
+Ruth Bamford & \textit{Ruth Bamford} & Mila de Vere  &  \textit{Mila de Vere} \\
+  & 05/08/2026 & & 07/10/2026 \\
+\bottomrule
+\end{tabularx}
+\StopReportTableRows
+
+\vspace{20mm}
+{\bfseries Classification: Commercial in Confidence\par}
+\vspace{3mm}
+\begin{minipage}{0.94\textwidth}
+\begin{notebox}
+The information contained in this document is strictly confidential and is intended for the addressee only. The unauthorised use, disclosure, copying, alteration or distribution of this document is strictly prohibited and may be unlawful.
+\end{notebox}
+\end{minipage}
+
+\vfill
+
+% Footer banner: non-floating and height-capped so it cannot move to another page.
+\IfFileExists{./Logos/RALSpaceLogoTitlePageFooter.png}{%
+  \includegraphics[width=1.0\textwidth]{./Logos/RALSpaceLogoTitlePageFooter.png}%
+}{RAL Space}
+
+\endgroup
+\end{titlepage}

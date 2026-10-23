@@ -1,0 +1,51 @@
+\chapter{Engineering Comparison and Selection Matrices}
+
+Here we consider the metrics driving the community development pathways, explaining the development choices seen in literature.
+
+
+\begin{table}[htbp]
+\centering
+\caption{Indicative fit of detector technologies to mission domains. A tick means commonly suitable, not automatically qualified.}
+\small
+\ReportTableRows
+\begin{tabular}{lcccccc}
+\toprule
+\rowcolor{RALblue}
+\tablehead{Technology} & \tablehead{LEO} & \tablehead{MEO} & \tablehead{GEO} & \tablehead{HEO} & \tablehead{Interplanetary} & \tablehead{Cislunar} \\
+\midrule
+\techdose{Simple dosimeter / RADFET} & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+\techsilicon{Silicon telescope} & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+\techpixel{Pixel detector} & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+\techhybrid{Si--scintillator hybrid} & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+\techdose{TEPC} & $\checkmark$ & -- & -- & -- & $\checkmark$ & $\checkmark$ \\
+\techother{Magnetic spectrometer} & -- & -- & -- & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+\techneutral{Neutron converter system} & $\checkmark$ & -- & -- & -- & $\checkmark$ & $\checkmark$ \\
+\bottomrule
+\end{tabular}
+\StopReportTableRows
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Questions to resolve before selecting or procuring a monitor.}
+\small
+\ReportTableRows
+\begin{tabularx}{\textwidth}{p{3.1cm} X X}
+\toprule
+\rowcolor{RALblue}
+\tablehead{Topic} & \tablehead{Required question} & \tablehead{Evidence required} \\
+\midrule
+Measurement objective & Operational warning, engineering housekeeping, anomaly diagnosis, science, dose or model validation? & User requirement and required data product \\
+Species and energy & Which particle species and energy channels must be separated? & Response matrix and calibration report \\
+Dynamic range & Can background and extreme events be measured without saturation? & Dead time, pile-up and maximum count-rate tests \\
+Contamination & How are proton/electron cross-contamination and side-penetrating particles treated? & Monte Carlo response and beam calibration \\
+Directionality & Is angular resolution required, or is an omnidirectional response preferable? & Geometric factor and angular-response model \\
+Accommodation & Are mass, volume, peak power, thermal rejection and field of view compatible? & Mechanical, electrical and thermal ICD \\
+Telemetry & Are raw events or processed products downlinked? & Data rate, onboard processing and storage budget \\
+Radiation tolerance & Can the electronics survive the environment it measures? & TID, SEE and displacement-damage qualification \\
+Heritage and TRL & Has the complete instrument flown, or only its detector component? & Flight history and configuration control \\
+Calibration & Is calibration traceable across the complete energy range? & Beam, source and ground-calibration documentation \\
+\bottomrule
+\end{tabularx}
+\StopReportTableRows
+\end{table}

@@ -1,0 +1,66 @@
+\chapter{Heritage and Existing Instruments}
+
+\begin{landscape}
+\scriptsize
+\ReportTableRows
+\begin{longtable}{p{2.5cm} p{3.4cm} p{2.4cm} p{2.5cm} p{2.2cm} p{1.7cm} p{1.7cm} p{2.5cm}}
+\caption{Heritage and existing instruments extracted from the SWIMMR and Kellett surveys. \ND\ denotes no data in the reviewed source.}\label{tab:heritage-master}\\
+\toprule
+\rowcolor{RALblue}
+\tablehead{Instrument} & \tablehead{Detector technology} & \tablehead{Protons} & \tablehead{Electrons} & \tablehead{Heavy ion / LET} & \tablehead{Mass} & \tablehead{Power} & \tablehead{Heritage / domain} \\
+\midrule
+\endfirsthead
+\toprule
+\rowcolor{RALblue}
+\tablehead{Instrument} & \tablehead{Detector technology} & \tablehead{Protons} & \tablehead{Electrons} & \tablehead{Heavy ion / LET} & \tablehead{Mass} & \tablehead{Power} & \tablehead{Heritage / domain} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+BIRD & \techpixel{Two Timepix units} & \ND & \ND & \ND & \ND & Battery & Orion EFT-1; 5800 km apogee \\
+CEASE / CEASE3 & \techsilicon{Multiple modules; silicon stacks and electrostatic analyser} & 2--150 MeV & 100 eV--50 keV; 90 keV--5 MeV & \ND & 4 kg & 8 W avg; 10 W peak & LEO, MEO, HEO, GEO \\
+CREDO-II & \techsilicon{Two 3 cm$^2$ silicon diodes in coincidence} & \ND & \ND & \ND & \ND & \ND & STRV missions \\
+EMU & \techsilicon{Silicon proton/electron monitor plus heavy-ion/TID functions} & 15--100 MeV & 0.1--5 MeV & Yes & 3.5 kg & 8 W & Galileo MEO; Japanese GEO units \\
+GOES SEM EPS/HEPAD & \techsilicon{Solid-state pulse-height instruments} & 0.8--500 MeV; later channels $>700$ MeV & 0.6--4+ MeV & Alpha 4--500 MeV & \ND & \ND & Operational GEO \\
+HERA & \techpixel{Network of Timepix sensor units} & \ND & \ND & Track / dose classification & \ND & \ND & Orion / Artemis human-spaceflight monitor \\
+HMRM & \techpixel{Miniaturised pixel silicon layers} & 0.6--500 MeV & 0.035--6 MeV & $dE/dx$ design aim & 52 g & $<1$ W & TechDemoSat-1; no useful returned data in 2022 review \\
+LUCID & \techpixel{Five Timepix detectors on five faces} & $>10$ MeV & $>0.4$ MeV & Alpha / other tracks & 1.2 kg & 5 W typical; 8 W max & 635 km LEO, TDS-1 \\
+MERiT & \techsilicon{APDs plus eight-SSD stack} & 0.2--0.4 and 7--100 MeV & 0.005--0.2 and 1--8 MeV & \ND & 1.13 kg & 0.3 W avg & 3U CeRE; payload communications failure reported \\
+MIRAM & \techpixel{Timepix3 plus four Si diodes} & 10(50)--400 MeV & 0.5(3)--6.5 MeV & \ND & $>150$ g & $>1$ W & Development concept; simulated ranges \\
+MPT ISS & \techpixel{Two-sensor Modupix telescope} & \ND & \ND & Direction and energy & \ND & \ND & ISS demonstration status uncertain \\
+NGRM / RMU & \techsilicon{Separate PSI electron and proton/ion sensor heads} & 2--200 MeV & 0.1--7 MeV & LET spectra & 1.4 kg & 2 W; 6 W peak & EDRS-C, MTG, MetOp-SG, Sentinel-6 family \\
+REM ISS & \techpixel{Timepix USB detectors, 300 and 500 $\mu$m sensors} & \ND & \ND & Track morphology / dose & \ND & \ND & Seven units delivered to ISS \\
+REPT & \techsilicon{Multi-layer Micron silicon stack} & 17--200 MeV & 1--20 MeV & \ND & 13.4 kg & 6.2 W & Van Allen Probes, HEO \\
+REPTile & \techsilicon{Four Micron silicon detectors} & 8.5--40 MeV & 0.5--$>3.3$ MeV & \ND & 1.25 kg & 2.5 W & CSSWE CubeSat, inclined LEO \\
+RISEPix & \techpixel{Two stacked Timepix detectors} & \ND & \ND & LET, particle type and direction & $>1$ kg & $>1$ W & RISESAT, likely LEO \\
+SATRAM & \techpixel{Single Timepix} & \ND & \ND & Event topology & 172--380 g & $\leq3$ W & Proba-V, 820 km polar LEO \\
+SEM-2 & \techother{TED, MEPED and DPU suite} & \ND & \ND & \ND & 18 kg total & \ND & MetOp LEO \\
+SREM & \techsilicon{Three-detector ESA monitor} & 23--450 MeV & 2--8 MeV & \ND & 2.6 kg & 2.5 W & Eight ESA missions: LEO, HEO and interplanetary \\
+TEPC ISS & \techdose{A150 tissue-equivalent plastic and gas proportional counter} & \ND & \ND & LET / dose equivalent & \ND & \ND & ISS crew-radiation monitoring \\
+VZLUSAT-1 & \techpixel{Single Timepix radiation monitor} & \ND & \ND & Event topology & \ND & \ND & Czech nanosatellite, LEO \\
+\end{longtable}
+\StopReportTableRows
+\end{landscape}
+
+\chapter{Operational Markets and Mission Classes}
+\begin{table}[htbp]
+\centering
+\caption{Representative instrument classes by market.}
+\small
+\ReportTableRows
+\begin{tabularx}{\textwidth}{p{3.2cm} p{4.2cm} X}
+\toprule
+\rowcolor{RALblue}
+\tablehead{Market / mission class} & \tablehead{Representative instruments} & \tablehead{Typical priorities} \\
+\midrule
+LEO spacecraft health and space weather & SEM-2, SATRAM, HMRM, LUCID, RADMON, RISEPix, VZLUSAT-1 & SAA response, trapped-particle flux, dose, anomaly correlation and low SWaP \\
+MEO navigation & EMU, Merlin, CEDEX, SREM & Outer-belt electrons, long lifetime, internal charging and operational continuity \\
+GEO meteorology and communications & GOES EPS/HEPAD, NGRM/RMU, SEDA, SEMIP, GRASP & Continuous operations, electron/proton channels, charging, cross-calibration and model validation \\
+HEO / radiation-belt science & REPT, CREDANCE, CEASE3, NORM & Wide dynamic range, directional telescopes and repeated transitions between regimes \\
+Human spaceflight & TEPC, ALTEA, DosTel, REM/Timepix, BIRD, HERA & Dose equivalent, shielding variations, real-time operations and distributed sensing \\
+Interplanetary / planetary & SREM, MARIE, RAD, RADEM, RML & SEP and GCR response, autonomous operation, broad energy range and radiation tolerance \\
+Emerging cislunar & CRaTER, RADOM, LND, MATCH, LunPAN concepts, IRADCAL & Primary and albedo particles, neutrons/gamma rays, directional context and limited heritage \\
+\bottomrule
+\end{tabularx}
+\StopReportTableRows
+\end{table}

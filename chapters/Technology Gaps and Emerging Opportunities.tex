@@ -1,0 +1,37 @@
+\chapter{Technology Gaps and Emerging Opportunities}
+\begin{table}[htbp]
+\centering
+\caption{Technology gaps and emerging opportunities.}
+\small
+\ReportTableRows
+\begin{tabularx}{\textwidth}{p{3.1cm} p{3.8cm} p{3.8cm} X}
+\toprule
+\rowcolor{RALblue}
+\tablehead{Capability} & \tablehead{Existing position} & \tablehead{Gap} & \tablehead{Opportunity} \\
+\midrule
+Broad-range low-SWaP spectrometry & Compact monitors generally cover selected bands or rely on unfolding & Simultaneous keV-to-hundreds-of-MeV coverage remains difficult below 1 kg & Hybrid silicon, scintillator and pixel architectures \\
+High-rate SEP response & Several pixel systems provide rich event information & Pile-up, saturation and telemetry can dominate in extreme events & Data-driven ASICs, adaptive processing and dual-gain channels \\
+Heavy-ion identification & Available in larger stacks and spectrometers & Limited capability in very small monitors & Multi-layer pixels, ToF and compact magnetic analysis \\
+Neutron measurement & Mature for resource mapping and large dosimeters & Charged and neutral radiation are often separate payloads & Converter-coated pixels and segmented scintillators \\
+Directional measurements & Telescopes provide direction but reduce acceptance & Small omnidirectional monitors may not distinguish incident and albedo populations & Multiple sensor heads, stacked pixels and compact hodoscopes \\
+Cislunar heritage & LRO, Chang'e and Chandrayaan provide important data & Few operational monitors are qualified for distributed cislunar infrastructure & Hosted payloads on logistics vehicles, relay orbiters, landers and surface assets \\
+Distributed monitoring & ISS and some spacecraft use multiple dose sensors & Few networks provide cross-calibrated spectra across platforms & Common compact monitor, calibration and interoperable data products \\
+Standardised data products & Operational systems use mission-specific processing & Cross-mission comparison remains difficult & Open response matrices and agreed calibration metadata \\
+UK sovereign supply & UK heritage exists in silicon diodes, electronics and instrument engineering & Several leading pixel solutions depend on non-UK ASIC supply chains & UK integration, calibration, packaging and mixed-technology instruments \\
+\bottomrule
+\end{tabularx}
+\StopReportTableRows
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[stage/.style={draw=RALblue,rounded corners,fill=RALlight,minimum width=28mm,minimum height=14mm,align=center,font=\small},arr/.style={-{Latex[length=3mm]},ultra thick,draw=RALblue}]
+\node[stage] (leo) {LEO\\spacecraft health\\and human flight};
+\node[stage, right=8mm of leo] (meo) {MEO\\navigation\\constellations};
+\node[stage, right=8mm of meo] (geo) {GEO\\operational\\space weather};
+\node[stage, right=8mm of geo] (deep) {HEO and\\interplanetary\\science};
+\node[stage, right=8mm of deep] (cis) {New markets\\cislunar logistics,\\Gateway and surface};
+\draw[arr] (leo) -- (meo); \draw[arr] (meo) -- (geo); \draw[arr] (geo) -- (deep); \draw[arr] (deep) -- (cis);
+\end{tikzpicture}
+\caption{Market progression from established Earth-orbit services to emerging cislunar infrastructure.}
+\end{figure}

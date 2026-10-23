@@ -1,0 +1,67 @@
+
+% Title page 
+\begin{figure*}
+\centering  
+\IfFileExists{./Logos/RALSpaceLogoTitlePage.png}{\includegraphics[width=0.95\textwidth]{./Logos/RALSpaceLogoTitlePage.png}}{UKRI/STFC}
+\end{figure*}
+
+%\input{Header.tex}
+
+%%%%%%%%%%% Standard Document cover stuff %%%%%%%%%%%
+
+%\date{\textbf{Document Number:} Final Report\\
+%\textbf{Issue:} Draft modular working version\\
+%\textbf{Date:} \today\\
+%\textbf{Classification:} Commercial in Confidence}
+
+\maketitle
+
+%\vspace{1.5cm}
+
+\thispagestyle{empty}
+
+\begin{center}
+\ReportTableRows
+\begin{tabular}{p{0.28\textwidth}p{0.18\textwidth}p{0.28\textwidth}p{0.18\textwidth}}
+\toprule
+\rowcolor{RALblue}
+\tablehead{Prepared by} & \tablehead{Signature/date} & \tablehead{Approved by} & \tablehead{Signature/date}\\
+\midrule
+Ruth Bamford & & \todo{Name} & \\
+\bottomrule
+\end{tabular}
+\StopReportTableRows
+\end{center}
+
+%\vspace{1cm}
+\begin{center}
+	\textbf{Classification:} Commercial in Confidence
+\end{center}
+\begin{notebox}
+The information contained in this document is strictly confidential and is intended for the addressee only. The unauthorised use, disclosure, copying, alteration or distribution of this document is strictly prohibited and may be unlawful.
+\end{notebox}
+
+
+\begin{figure*}[h]
+\centering
+ \IfFileExists{./Logos/RALSpaceLogoTitlePageFooter.png}{\includegraphics[width=0.85\textwidth]{./Logos/RALSpaceLogoTitlePageFooter}}{UKRI/STFC}
+\end{figure*}
+
+%\input{Title}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         End of title page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{notebox}{}
+	
+\section*{Disclaimer: Use of Artificial Intelligence}
+
+Artificial Intelligence (AI) tools, specifically ChatGPT (OpenAI) and Microsoft Co-Pilot, were used to assist with the organisation, editing, proofreading and \LaTeX{} preparation of this report, together with software scripting and the production of conceptual illustrations.
+
+AI was \textbf{not} used to generate, analyse or interpret scientific data, numerical simulations, laboratory measurements, engineering calculations or technical conclusions. All scientific content has been reviewed and verified by the authors, who accept full responsibility for the accuracy and integrity of this report.
+
+AI-generated illustrations are used solely for conceptual explanation and are clearly distinguished from scientific figures derived from experiments, simulations or spacecraft observations.
+\end{notebox}

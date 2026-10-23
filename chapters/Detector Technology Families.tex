@@ -1,0 +1,218 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Detector Technologies}
+
+The instruments reviewed in this survey employ a variety of physical detection principles. Nevertheless, they can be grouped into a number of broad detector families according to their underlying detection mechanism. Although individual instruments differ considerably in their implementation and performance, members of the same family generally share similar strengths, limitations and engineering trade-offs.
+
+\begin{figure}[htbp]
+\centering
+\resizebox{0.95\textwidth}{!}{%
+\begin{tikzpicture}[
+node distance=8mm and 10mm,
+box/.style={
+draw=RALblue,
+rounded corners,
+fill=RALlight,
+align=center,
+minimum width=31mm,
+minimum height=10mm,
+font=\small},
+root/.style={
+draw=RALblue,
+rounded corners,
+fill=RALblue,
+text=white,
+align=center,
+minimum width=40mm,
+minimum height=11mm,
+font=\bfseries},
+arr/.style={-{Latex[length=2mm]},thick,draw=RALblue}
+]
+
+\node[root] (root) {Space Radiation Monitors};
+
+\node[box, below left=15mm and 54mm of root] (si)
+{Silicon\\Telescope Systems};
+
+\node[box, below left=15mm and 18mm of root] (pix)
+{Pixel Detectors\\Timepix / Medipix};
+
+\node[box, below right=15mm and 18mm of root] (scint)
+{Scintillator\\Detectors};
+
+\node[box, below right=15mm and 54mm of root] (hyb)
+{Hybrid Silicon\\-- Scintillator};
+
+\node[box, below=13mm of si] (dose)
+{Passive Dosimetry\\RADFET, TLD, OSL};
+
+\node[box, below=13mm of pix] (tepc)
+{TEPC and\\Microdosimetry};
+
+\node[box, below=13mm of scint] (mag)
+{Magnetic / ToF\\Spectrometers};
+
+\node[box, below=13mm of hyb] (neutral)
+{Neutron / Gamma\\Converter Systems};
+
+\foreach \n in {si,pix,scint,hyb}
+\draw[arr] (root) -- (\n);
+
+\draw[arr] (si) -- (dose);
+\draw[arr] (pix) -- (tepc);
+\draw[arr] (scint) -- (mag);
+\draw[arr] (hyb) -- (neutral);
+
+\end{tikzpicture}
+}
+\caption{Principal detector technology families identified in this survey.}
+\label{fig:DetectorFamilies}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[htbp]
+\centering
+\caption{Engineering comparison of the principal detector technologies.}
+\small
+\ReportTableRows
+\begin{tabularx}{\textwidth}{p{2.7cm} p{3.7cm} p{3.7cm} X}
+\toprule
+\rowcolor{RALblue}
+\tablehead{Technology} &
+\tablehead{Strengths} &
+\tablehead{Limitations} &
+\tablehead{Typical Applications} \\
+\midrule
+
+\techsilicon{Silicon telescope} &
+High flight heritage; coincidence logic; $\Delta E$--$E$ particle identification; directional response &
+Detector thickness increases with required energy range; contamination corrections may be required &
+Operational radiation monitoring, space-weather monitoring and scientific particle measurements \\
+
+\techpixel{Pixel detector} &
+Event imaging; particle classification; directional reconstruction; compact and scalable &
+Limited stopping power; high-rate and pile-up constraints; calibration complexity &
+Miniaturised radiation monitors, distributed monitoring and track imaging \\
+
+\techscint{Scintillator} &
+Large active volume; high stopping power for energetic particles; broad energy response &
+Particle identification often requires multiple detector materials or coincidence techniques &
+High-energy particle measurements, calorimetry, neutron and gamma-ray detection \\
+
+\techhybrid{Hybrid silicon--scintillator} &
+Combines particle tracking with calorimetry; broad energy coverage &
+Greater mechanical, thermal and calibration complexity &
+Broad-energy charged-particle spectroscopy \\
+
+\techdose{TEPC} &
+Direct tissue-equivalent microdosimetric response &
+Limited particle identification and directional information &
+Crew radiation monitoring and dose-equivalent estimation \\
+
+\techother{Magnetic spectrometer / ToF} &
+Charge sign, momentum and particle-species discrimination &
+Large mass, magnets, alignment tolerances and relatively high power &
+High-fidelity scientific instruments and emerging compact spectrometers \\
+
+\techdose{RADFET / Passive dosimeter} &
+Very low power; compact; easily distributed throughout a spacecraft &
+Integrated dose only; little or no spectral information &
+Spacecraft housekeeping, shielding surveys and long-term dose monitoring \\
+
+\bottomrule
+\end{tabularx}
+\StopReportTableRows
+\label{tab:TechnologyComparison}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Silicon Telescope Systems}
+
+Representative instruments include CREDO, DosTel, CPDS, EMU, NGRM, ICARE-NG and REPT.
+
+\begin{itemize}[noitemsep]
+\item Coincidence particle detection with $\Delta E$--$E$ capability (instrument dependent)
+\item Good proton and electron discrimination
+\item Typical mass: 1--4\,kg
+\item Typical power: 3--10\,W
+\end{itemize}
+
+\textbf{Strength:} High flight heritage, excellent stability and well-established calibration methods.
+
+\textbf{Limitation:} Limited miniaturisation potential without performance trade-offs.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Pixel Detectors}
+
+Representative instruments include HMRM, SATRAM, LUCID, MIRAM, BIRD, HERA, MPT ISS and RISEPix.
+
+\begin{itemize}[noitemsep]
+\item Event imaging and track reconstruction
+\item Particle classification and directional capability
+\item Typical mass: 50--300\,g
+\item Typical power: $<$1--3\,W
+\end{itemize}
+
+\textbf{Strength:} Excellent miniaturisation potential with highly scalable architectures.
+
+\textbf{Limitation:} Limited stopping power and possible saturation during periods of high particle flux.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Hybrid Silicon--Scintillator Systems}
+
+Representative instruments include CRaTER, HEPD, GOES HEPAD, RAD and RADEM.
+
+\begin{itemize}[noitemsep]
+\item Broad energy coverage
+\item Good charged-particle identification
+\item Heavy-ion capability
+\item Typical mass: 5--40\,kg
+\end{itemize}
+
+\textbf{Strength:} Broad energy coverage with good particle-identification capability.
+
+\textbf{Limitation:} Generally unsuitable for small hosted payloads because of mass and accommodation requirements.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Dosimetry and LET Monitors}
+
+Representative instruments include Liulin, M-42, RADFET-based systems, TEPC and DosTel.
+
+\begin{itemize}[noitemsep]
+\item Integrated dose and/or dose-equivalent measurement
+\item High reliability
+\item Long operational heritage
+\end{itemize}
+
+\textbf{Limitation:} Limited spectral and temporal resolution.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Miniaturisation Trends}
+
+Radiation-monitor development has progressively moved towards lower mass, lower power and increased onboard processing capability. Broadly, three generations can be identified:
+
+\begin{enumerate}[noitemsep]
+\item \textbf{Early Generation (1990--2010):} Classical silicon telescope instruments developed primarily for scientific missions.
+\item \textbf{Operational Generation (2000--Present):} Compact engineering monitors for routine operation on LEO, MEO and GEO spacecraft.
+\item \textbf{Miniaturised Generation (Present):} Pixel-based and hybrid detector systems intended for CubeSats, hosted payloads and emerging exploration missions.
+\end{enumerate}
+
+Current pixel-based systems represent the most aggressive miniaturisation pathway. However, they do not yet provide the full energy coverage, stopping power or particle-identification capability of larger telescope systems.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Key Technical Trade-offs}
+
+The principal engineering trade-offs identified throughout this survey are:
+
+\begin{enumerate}[noitemsep]
+\item Energy Range versus Instrument Size
+\item Directional Response versus Omnidirectional Coverage
+\item Dynamic Range versus Saturation
+\item Mission-Specific Optimisation
+\end{enumerate}

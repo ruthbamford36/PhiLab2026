@@ -1,0 +1,353 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AEGIS Final Report Header
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{inputenc,microtype,booktabs,longtable,tabularx,array,pdflscape,enumitem,xcolor,hyperref,graphicx,caption,tikz,amssymb}
+
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+
+\usepackage{amsmath,amssymb,bm}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{framed}
+\usepackage{ragged2e}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{pgfgantt}
+\usepackage{titlesec}
+
+\usepackage{booktabs}
+
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc}
+\setlist[itemize]{topsep=2pt,itemsep=1pt,parsep=0pt,partopsep=0pt}
+\setlist[enumerate]{topsep=2pt,itemsep=1pt,parsep=0pt,partopsep=0pt}
+
+%\graphicspath{{FIGURES/}}
+
+\usepackage{pdflscape} % enable landscape pages 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header/footer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\headheight}{36pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\IfFileExists{./Logos/UKRISTFCRALLogo.png}{\includegraphics[width=3.2cm]{./Logos/UKRISTFCRALLogo.png}}{UKRI/STFC}}
+\fancyhead[C]{Radiation Monitor Survey \\ Update 2026}
+\fancyhead[R]{\IfFileExists{./Logos/RALSpaceLogo.png}{\includegraphics[width=3.2cm]{./Logos/RALSpaceLogo.png}}{RAL Space}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Useful colours and boxes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{LotsColouredBoxes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Useful colours and boxes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Put packages once only in Header.tex / preamble
+\usepackage[dvipsnames]{xcolor}
+\usepackage[most]{tcolorbox}
+
+% ----------------------------------------------------------
+% AEGIS box colour palette
+% ----------------------------------------------------------
+\definecolor{AEGISYellow}{RGB}{255,238,153}   % strong warm yellow
+\definecolor{AEGISBlue}{RGB}{205,225,255}     % clear light blue
+\definecolor{AEGISGreen}{RGB}{205,245,205}    % clear light green
+\definecolor{AEGISRed}{RGB}{255,205,205}      % clear light red
+\definecolor{AEGISGray}{RGB}{225,225,225}     % neutral gray
+
+\definecolor{AEGISDarkBlue}{RGB}{0,45,110}
+\definecolor{AEGISDarkGreen}{RGB}{0,95,55}
+\definecolor{AEGISDarkRed}{RGB}{145,30,30}
+\definecolor{AEGISDarkYellow}{RGB}{120,80,0}
+\definecolor{AEGISDarkGray}{RGB}{75,75,75}
+
+% ----------------------------------------------------------
+% Shared box style
+% ----------------------------------------------------------
+\tcbset{
+  aegisbox/.style={
+    enhanced,
+    breakable,
+    sharp corners,
+    boxrule=0.8pt,
+    left=1.5mm,
+    right=1.5mm,
+    top=1mm,
+    bottom=1mm,
+    before skip=8pt,
+    after skip=8pt,
+    fonttitle=\bfseries,
+    coltitle=white
+  }
+}
+
+% ----------------------------------------------------------
+% Main report boxes
+% ----------------------------------------------------------
+
+\newtcolorbox{todobox}[1][To be completed]{
+  aegisbox,
+  colback=AEGISYellow,
+  colframe=AEGISDarkYellow,
+  title=#1
+}
+
+\newtcolorbox{evidencebox}[1][Evidence to include]{
+  aegisbox,
+  colback=AEGISGreen,
+  colframe=AEGISDarkGreen,
+  title=#1
+}
+
+\newtcolorbox{riskbox}[1][Residual risk / open point]{
+  aegisbox,
+  colback=AEGISRed,
+  colframe=AEGISDarkRed,
+  title=#1
+}
+
+\newtcolorbox{summarybox}[1][Summary finding]{
+  aegisbox,
+  colback=AEGISBlue,
+  colframe=AEGISDarkBlue,
+  title=#1
+}
+
+\newtcolorbox{notebox}[1][Note]{
+  aegisbox,
+  colback=AEGISGray,
+  colframe=AEGISDarkGray,
+  title=#1
+}
+
+% ----------------------------------------------------------
+% Plain block quotes, for inherited mid-term text
+% ----------------------------------------------------------
+% Usage:
+% \begin{blockquote} ... \end{blockquote}
+% \begin{blockquotegreen} ... \end{blockquotegreen}
+%
+% These are kept for compatibility with the mid-term report.
+% They are deliberately simpler than the named report boxes above.
+
+\newtcolorbox{blockquote}{
+  breakable,
+  colback=AEGISYellow,
+  colframe=AEGISDarkYellow,
+  boxrule=0.5pt,
+  sharp corners,
+  left=1.5mm,
+  right=1.5mm,
+  top=1mm,
+  bottom=1mm,
+  before skip=6pt,
+  after skip=6pt
+}
+
+\newtcolorbox{blockquotegray}{
+  breakable,
+  colback=AEGISGray,
+  colframe=AEGISDarkGray,
+  boxrule=0.5pt,
+  sharp corners,
+  left=1.5mm,
+  right=1.5mm,
+  top=1mm,
+  bottom=1mm,
+  before skip=6pt,
+  after skip=6pt
+}
+
+\newtcolorbox{blockquotegreen}{
+  breakable,
+  colback=AEGISGreen,
+  colframe=AEGISDarkGreen,
+  boxrule=0.5pt,
+  sharp corners,
+  left=1.5mm,
+  right=1.5mm,
+  top=1mm,
+  bottom=1mm,
+  before skip=6pt,
+  after skip=6pt
+}
+
+\newtcolorbox{blockquoteyellow}{
+  breakable,
+  colback=AEGISYellow,
+  colframe=AEGISDarkYellow,
+  boxrule=0.5pt,
+  sharp corners,
+  left=1.5mm,
+  right=1.5mm,
+  top=1mm,
+  bottom=1mm,
+  before skip=6pt,
+  after skip=6pt
+}
+
+\newtcolorbox{blockquoteblue}{
+  breakable,
+  colback=AEGISBlue,
+  colframe=AEGISDarkBlue,
+  boxrule=0.5pt,
+  sharp corners,
+  left=1.5mm,
+  right=1.5mm,
+  top=1mm,
+  bottom=1mm,
+  before skip=6pt,
+  after skip=6pt
+}
+
+\newtcolorbox{blockquotered}{
+  breakable,
+  colback=AEGISRed,
+  colframe=AEGISDarkRed,
+  boxrule=0.5pt,
+  sharp corners,
+  left=1.5mm,
+  right=1.5mm,
+  top=1mm,
+  bottom=1mm,
+  before skip=6pt,
+  after skip=6pt
+}
+
+% ----------------------------------------------------------
+% Optional: compact lists from pandoc/imported text
+% ----------------------------------------------------------
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}%
+  \setlength{\parskip}{0pt}%
+}
+
+
+%%%%%%%%%%%%%% Usage %%%%%%%%%%%%%%%%
+
+%\begin{todobox}
+%Text here.
+%\end{todobox}
+
+%\begin{todobox}[Plain Language Summary]
+%Text here.
+%\end{todobox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Define RAL Specific blues
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{RALblue}{RGB}{0,72,120}
+\definecolor{RALlight}{RGB}{228,239,248}
+\definecolor{RALgrey}{RGB}{90,90,90}
+
+% ----------------------------------------------------------
+% Report table system
+% Colour has one meaning throughout: detector technology.
+% Blue headers and subtle alternating rows provide structure.
+% ----------------------------------------------------------
+\definecolor{TechSilicon}{HTML}{D9EAF7}
+\definecolor{TechPixel}{HTML}{FCE4C5}
+\definecolor{TechScint}{HTML}{E3F1D5}
+\definecolor{TechHybrid}{HTML}{DDF2E6}
+\definecolor{TechDose}{HTML}{E9DDF2}
+\definecolor{TechNeutral}{HTML}{FFF2B2}
+\definecolor{TechOther}{HTML}{E7E7E7}
+\definecolor{NewCue}{HTML}{7A1FA2}
+
+\newcommand{\techsilicon}[1]{\cellcolor{TechSilicon}#1}
+\newcommand{\techpixel}[1]{\cellcolor{TechPixel}#1}
+\newcommand{\techscint}[1]{\cellcolor{TechScint}#1}
+\newcommand{\techhybrid}[1]{\cellcolor{TechHybrid}#1}
+\newcommand{\techdose}[1]{\cellcolor{TechDose}#1}
+\newcommand{\techneutral}[1]{\cellcolor{TechNeutral}#1}
+\newcommand{\techother}[1]{\cellcolor{TechOther}#1}
+\newcommand{\newinstrument}[1]{\textbf{\color{NewCue}#1}}
+\newcommand{\TBC}{\textit{TBC}}
+\newcommand{\tablehead}[1]{\textcolor{white}{\textbf{#1}}}
+\newcommand{\ReportTableRows}{\rowcolors{2}{white}{RALlight}}
+\newcommand{\StopReportTableRows}{\rowcolors{2}{}{}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\hypersetup{colorlinks=true,linkcolor=RALblue,urlcolor=RALblue,citecolor=RALblue,pdftitle={State of the Art Review of Space Radiation Monitors},pdfauthor={Dr Ruth Bamford}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     simple unified vector style
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\vecb}[1]{\bm{#1}}
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+\newcommand{\evidence}[1]{\textcolor{teal}{[Evidence: #1]}}
+\newcommand{\risk}[1]{\textcolor{red!70!black}{[Residual risk: #1]}}
+\newcommand{\status}[1]{\textbf{Status:} #1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figure macros, captions kept with figures for now.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Some new colours for report
+% ---- Document identity ------------------------------------------------------
+\newcommand{\ReportTitle}{State-of-the-Art Review of Space Radiation Monitors 2026}
+\newcommand{\ReportSubtitle}{Heritage Systems, Emerging Technologies and Future Markets}
+\newcommand{\ReportAuthor}{Dr Ruth Bamford}
+\newcommand{\ReportOrganisation}{RAL Space}
+\newcommand{\ReportVersion}{Draft 0.4}
+
+%\newcommand{\ReportDate}{\today}
+%\newcommand{\ReportDate}{\displaydate{date}}
+
+% ---- House colours ----------------------------------------------------------
+\definecolor{RALblue}{HTML}{005EB8}
+\definecolor{RALlight}{HTML}{E8F2FA}
+\definecolor{TechSilicon}{HTML}{D9EAF7}
+\definecolor{TechPixel}{HTML}{FCE4C5}
+\definecolor{TechScint}{HTML}{E3F1D5}
+\definecolor{TechHybrid}{HTML}{DDF2E6}
+\definecolor{TechDose}{HTML}{E9DDF2}
+\definecolor{TechNeutral}{HTML}{FFF2B2}
+\definecolor{TechOther}{HTML}{E7E7E7}
+\definecolor{NewCue}{HTML}{7A1FA2}
+
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+
+% Fancy header
+
+\hypersetup{colorlinks=true,linkcolor=RALblue,citecolor=RALblue,urlcolor=RALblue, pdftitle={\ReportTitle},pdfauthor={\ReportAuthor}}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\fancyhead[L]{\small\ReportTitle}
+%\fancyhead[R]{\small\ReportVersion}
+%\fancyfoot[C]{\thepage}

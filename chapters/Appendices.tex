@@ -1,0 +1,87 @@
+\appendix
+\chapter{Appendix}
+
+\section{Orbit-Grouped Instrument Tables}
+\label{app:orbit-tables}
+
+The tables in this appendix provide alternative views for readers beginning with a
+mission domain. They are indexes into the canonical heritage and post-2023 tables
+(Tables~\ref{tab:heritage-master} and~\ref{tab:post2023-master}); quantitative
+values should be maintained in those tables rather than independently here.
+
+\ReportTableRows
+\begin{longtable}{p{2.4cm}p{4.2cm}p{4.0cm}p{5.0cm}}
+\caption{Orbit-grouped instrument index.}\label{tab:orbit-index}\\
+\toprule
+\rowcolor{RALblue}
+\tablehead{Domain} & \tablehead{Representative instruments} &
+\tablehead{Principal populations} & \tablehead{Selection questions}\\
+\midrule\endfirsthead
+\toprule
+\rowcolor{RALblue}
+\tablehead{Domain} & \tablehead{Representative instruments} &
+\tablehead{Principal populations} & \tablehead{Selection questions}\\
+\midrule\endhead
+\bottomrule\endlastfoot
+LEO & HMRM, SATRAM, LUCID, HEPD, DosTel, ALTEA & Trapped particles, SEP and GCR & SAA cadence, dynamic range, platform size and human-rating requirements\\
+MEO & SREM, NGRM, EMU, Merlin and CEDEX & Inner- and outer-belt populations & Dose tolerance, electron/proton discrimination and long-term stability\\
+GEO & SREM, NGRM/RMU, GOES particle suites and SEDA & Outer-belt electrons, SEP and GCR & Latency, charging relevance, contamination and cross-calibration\\
+HEO & REPT, CREDANCE, CEASE3 and NORM & Belt crossings, SEP and GCR & Changing geometry, background and autonomous mode control\\
+Interplanetary & RAD, RADEM, Liulin family and HENON REPE & SEP, GCR and solar-wind particles & Species, directionality, event response and autonomous operation\\
+Cislunar/lunar & CRaTER, LND, MATCH, PixPAN, NeuPix and IRADCAL & SEP, GCR and lunar secondaries & Albedo directionality, neutral particles, resources and limited heritage\\
+\end{longtable}
+\StopReportTableRows
+
+%\section{Detector-Family Tables}
+%\label{app:family-tables}
+
+\begin{table}[htbp]
+\centering\small
+\caption{Detector-family index and technology colour key.}
+\label{tab:family-index}
+\ReportTableRows
+\begin{tabularx}{\textwidth}{p{3.5cm}Y Y}
+\toprule
+\rowcolor{RALblue}
+\tablehead{Family} & \tablehead{Representative instruments} &
+\tablehead{Comparison fields to retain}\\
+\midrule
+\techsilicon{Silicon telescope} & SREM, NGRM, EMU, ALTEA and HENON REPE & Stack geometry, coincidence, geometric factor and contamination\\
+\techpixel{Pixel detector} & HMRM, SATRAM, LUCID, REM and RISEPix & Sensor thickness, pitch, acquisition mode, pile-up and classification\\
+\techscint{Scintillator} & Instrument-specific counters and calorimeters & Material, light collection, threshold and radiation ageing\\
+\techhybrid{Hybrid} & REPT, CRaTER, RAD, HEPD, MATCH and IRADCAL & Tracker/calorimeter coupling, stopping range and cross-calibration\\
+\techdose{Dosimetry/TEPC} & TEPC, DosTel and Liulin family & Dose quantity, tissue equivalence, LET and integration period\\
+\techneutral{Neutral converter} & NeuPix and dedicated neutron/gamma systems & Converter, efficiency, background rejection and unfolding\\
+\techother{Magnetic/ToF} & PixPAN and larger spectrometers & Field integral, lever arm, ToF resolution and charge-sign determination\\
+\bottomrule
+\end{tabularx}
+\StopReportTableRows
+\end{table}
+
+\section{Human-Exploration Detector Table}
+\label{app:human-exploration}
+
+\ReportTableRows
+\begin{longtable}{p{3.0cm}p{4.0cm}p{3.5cm}p{5.2cm}}
+\caption{Human-exploration detector view.}\label{tab:human-exploration}\\
+\toprule
+\rowcolor{RALblue}
+\tablehead{Instrument/family} & \tablehead{Technology} &
+\tablehead{Environment/heritage} & \tablehead{Human-exploration relevance}\\
+\midrule\endfirsthead
+\toprule
+\rowcolor{RALblue}
+\tablehead{Instrument/family} & \tablehead{Technology} &
+\tablehead{Environment/heritage} & \tablehead{Human-exploration relevance}\\
+\midrule\endhead
+\bottomrule\endlastfoot
+ALTEA & \techsilicon{Silicon telescope array} & ISS & Directional and LET-related measurements; configuration and status to verify\\
+TEPC & \techdose{Tissue-equivalent proportional counter} & Crewed-spacecraft heritage & Direct microdosimetric relevance with limited species resolution\\
+DosTel & \techdose{Silicon dosimeter/telescope} & ISS & Operational absorbed-dose and particle information\\
+REM/Timepix & \techpixel{Pixel detector} & ISS & Distributed track imaging and dose mapping\\
+Liulin family & \techdose{Silicon dosimeter} & Multiple crewed and deep-space missions & Compact long-duration dose monitoring\\
+CRaTER & \techhybrid{Silicon/tissue-equivalent-plastic stack} & Lunar orbit & Shielding and tissue-equivalent-material response context\\
+RAD & \techhybrid{Silicon/scintillator} & Cruise and Mars surface & Mixed-field dose and particle-environment context\\
+\end{longtable}
+\StopReportTableRows
+

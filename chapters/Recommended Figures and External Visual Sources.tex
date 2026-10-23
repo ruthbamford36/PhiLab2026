@@ -1,0 +1,70 @@
+\section{Recommended Figures and External Visual Sources}
+The diagrams in this report are original and compile directly using TikZ. The following external material may be useful for a final illustrated edition. Permission and licence conditions should be checked before reproduction.
+
+\begin{table}[htbp]
+\centering
+\caption{Suggested external figure sources.}
+\small
+\ReportTableRows
+\begin{tabularx}{\textwidth}{p{4.0cm} X}
+\toprule
+\rowcolor{RALblue}
+\tablehead{Suggested figure} & \tablehead{Source link} \\
+\midrule
+HENON mission and orbit concept & \href{https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Technology_CubeSats/HENON}{ESA HENON mission page} \\
+LunPAN mission concept & \href{https://www.hou.usra.edu/meetings/lunarsurface24/pdf/5024.pdf}{Lunar Surface Science Workshop 2024 concept paper} \\
+Chang'e-7 detector schematic & \href{https://doi.org/10.3390/aerospace11110893}{Wang et al., Aerospace 11, 893 (2024)} \\
+IRADCAL detector concept & \href{https://doi.org/10.48550/arXiv.2411.11178}{IRADCAL concept preprint} \\
+Timepix detector illustrations & \href{https://medipix.web.cern.ch/}{CERN Medipix collaboration website} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Master Comparison Tables and Data Schema}
+\label{app:master-comparison}
+
+The master comparison should be maintained as a single controlled dataset. The
+body tables and specialist appendix views are outputs from that record. This avoids
+different values becoming established for the same instrument in different parts
+of the report.
+
+\ReportTableRows
+\begin{longtable}{p{3.5cm}p{4.2cm}p{7.9cm}}
+\caption{Recommended fields for the master instrument record.}\label{tab:master-schema}\\
+\toprule
+\rowcolor{RALblue}
+\tablehead{Group} & \tablehead{Field} & \tablehead{Editorial rule}\\
+\midrule\endfirsthead
+\toprule
+\rowcolor{RALblue}
+\tablehead{Group} & \tablehead{Field} & \tablehead{Editorial rule}\\
+\midrule\endhead
+\bottomrule\endlastfoot
+Identity & Instrument, version and developer & Separate an instrument family from each flight configuration\\
+Evidence & Primary source, date and confidence & Retain a traceable source for every quantitative claim\\
+Mission & Platform, launch, orbit and duration & Distinguish planned, launched, commissioned and operational\\
+Technology & Family, sensor, converter and readout & Use the controlled detector-family vocabulary and colour palette\\
+Particles & Species and reported products & Distinguish direct measurement from derived classification\\
+Performance & Range, bins, resolution, geometric factor and FoV & Record definitions, qualifiers and whether evidence is test or flight based\\
+Rates & Flux range, dead time, saturation and cadence & Include acquisition-mode dependence\\
+Resources & Mass, dimensions, power, thermal and telemetry & State whether electronics, enclosure and harness are included\\
+Interfaces & Electrical, data, mechanical and timing & Record the applicable standard and configuration\\
+Calibration & Ground, in-flight, response matrix and cross-calibration & Link calibration evidence to the correct hardware version\\
+Readiness & TRL, heritage and status date & Treat readiness as dated evidence, not a permanent attribute\\
+Open points & Assumptions, conflicts and missing values & Use \ND{} or \TBC{}; do not infer undisclosed values\\
+\end{longtable}
+\StopReportTableRows
+
+\section{Editorial and Verification Backlog}
+\label{app:editorial-backlog}
+
+\begin{enumerate}[leftmargin=*]
+\item Reconcile every heritage row against the controlled Kellett/SWIMMR sources.
+\item Apply detector-family colour coding to the %technology cell in both canonical tables.
+\item Resolve whether MATCH and the separately described Chang'e-7 energetic-particle detector are one payload, related subsystems or separate activities.
+\item Standardise units and state whether energy ranges are incident, deposited or reconstructed energies.
+\item Complete mass, power, dimensions, field of view, geometric factor and interface fields without inference.
+\item Generate mass--power, energy-coverage and development-timeline figures directly from the controlled dataset.
+\item Add source notes or citations at row level where values come from different configurations.
+\end{enumerate}
+

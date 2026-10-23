@@ -1,0 +1,40 @@
+\begin{titlepage}
+  \centering
+  \IfFileExists{./Logos/RALSpaceLogoTitlePage.png}{\includegraphics[width=0.95\textwidth]{./Logos/RALSpaceLogoTitlePage.png}}{UKRI/STFC}
+  %\vspace*{25mm}
+  {\Huge\bfseries\color{RALblue}\ReportTitle\par}
+  %\vspace{5mm}
+  {\Large\ReportSubtitle\par}
+  \vfill
+  {\large \ReportAuthor\\\ReportOrganisation\par}
+  %\vspace{12mm}
+  {\ReportVersion\\\ReportDate\par}
+  \vfill
+  \fbox{\parbox{0.82\textwidth}{\small
+  \textbf{Drafting note.} Values marked \TBC{} require verification against a
+  primary source; \ND{} means that no defensible value is currently recorded.
+  Colour identifies detector technology, not instrument age.}}
+  
+  \ReportTableRows
+	\begin{tabular}{p{0.28\textwidth}p{0.18\textwidth}p{0.28\textwidth}p{0.18\textwidth}}
+		\toprule
+		\rowcolor{RALblue}
+		\tablehead{Prepared by} & \tablehead{Signature/date} & \tablehead{Approved by} & \tablehead{Signature/date}\\
+		\midrule
+		Ruth Bamford & & \todo{Name} & \\
+	\bottomrule
+	\end{tabular}
+	\StopReportTableRows
+	\end{center}
+
+  
+  \begin{center}
+	\textbf{Classification:} Commercial in Confidence
+\end{center}
+\begin{notebox}
+The information contained in this document is strictly confidential and is intended for the addressee only. The unauthorised use, disclosure, copying, alteration or distribution of this document is strictly prohibited and may be unlawful.
+\end{notebox}
+
+  \IfFileExists{./Logos/RALSpaceLogoTitlePageFooter.png}{\includegraphics[width=0.85\textwidth]{./Logos/RALSpaceLogoTitlePageFooter}}{UKRI/STFC}
+  
+\end{titlepage}

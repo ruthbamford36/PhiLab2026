@@ -1,0 +1,165 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Useful colours and boxes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Put packages once only in Header.tex / preamble
+\usepackage[most]{tcolorbox}
+
+% ----------------------------------------------------------
+% AEGIS box colour palette
+% ----------------------------------------------------------
+\definecolor{AEGISYellow}{RGB}{255,238,153}
+\definecolor{AEGISBlue}{RGB}{205,225,255}
+\definecolor{AEGISGreen}{RGB}{205,245,205}
+\definecolor{AEGISRed}{RGB}{255,205,205}
+\definecolor{AEGISGray}{RGB}{225,225,225}
+
+\definecolor{AEGISDarkBlue}{RGB}{0,45,110}
+\definecolor{AEGISDarkGreen}{RGB}{0,95,55}
+\definecolor{AEGISDarkRed}{RGB}{145,30,30}
+\definecolor{AEGISDarkYellow}{RGB}{120,80,0}
+\definecolor{AEGISDarkGray}{RGB}{75,75,75}
+
+% ----------------------------------------------------------
+% Shared box style
+% ----------------------------------------------------------
+\tcbset{
+  aegisbox/.style={
+    enhanced,
+    breakable,
+    sharp corners,
+    boxrule=0.8pt,
+    left=1.5mm,
+    right=1.5mm,
+    top=1mm,
+    bottom=1mm,
+    before skip=8pt,
+    after skip=8pt,
+    fonttitle=\bfseries,
+    coltitle=white
+  }
+}
+
+\newtcolorbox{todobox}[1][To be completed]{
+  aegisbox,
+  colback=AEGISYellow,
+  colframe=AEGISDarkYellow,
+  title=#1
+}
+
+\newtcolorbox{evidencebox}[1][Evidence to include]{
+  aegisbox,
+  colback=AEGISGreen,
+  colframe=AEGISDarkGreen,
+  title=#1
+}
+
+\newtcolorbox{riskbox}[1][Residual risk / open point]{
+  aegisbox,
+  colback=AEGISRed,
+  colframe=AEGISDarkRed,
+  title=#1
+}
+
+\newtcolorbox{summarybox}[1][Summary finding]{
+  aegisbox,
+  colback=AEGISBlue,
+  colframe=AEGISDarkBlue,
+  title=#1
+}
+
+\newtcolorbox{notebox}[1][Note]{
+  aegisbox,
+  colback=AEGISGray,
+  colframe=AEGISDarkGray,
+  title=#1
+}
+
+\newtcolorbox{blockquote}{
+  breakable,
+  colback=AEGISYellow,
+  colframe=AEGISDarkYellow,
+  boxrule=0.5pt,
+  sharp corners,
+  left=1.5mm,
+  right=1.5mm,
+  top=1mm,
+  bottom=1mm,
+  before skip=6pt,
+  after skip=6pt
+}
+
+\newtcolorbox{blockquotegray}{
+  breakable,
+  colback=AEGISGray,
+  colframe=AEGISDarkGray,
+  boxrule=0.5pt,
+  sharp corners,
+  left=1.5mm,
+  right=1.5mm,
+  top=1mm,
+  bottom=1mm,
+  before skip=6pt,
+  after skip=6pt
+}
+
+\newtcolorbox{blockquotegreen}{
+  breakable,
+  colback=AEGISGreen,
+  colframe=AEGISDarkGreen,
+  boxrule=0.5pt,
+  sharp corners,
+  left=1.5mm,
+  right=1.5mm,
+  top=1mm,
+  bottom=1mm,
+  before skip=6pt,
+  after skip=6pt
+}
+
+\newtcolorbox{blockquoteyellow}{
+  breakable,
+  colback=AEGISYellow,
+  colframe=AEGISDarkYellow,
+  boxrule=0.5pt,
+  sharp corners,
+  left=1.5mm,
+  right=1.5mm,
+  top=1mm,
+  bottom=1mm,
+  before skip=6pt,
+  after skip=6pt
+}
+
+\newtcolorbox{blockquoteblue}{
+  breakable,
+  colback=AEGISBlue,
+  colframe=AEGISDarkBlue,
+  boxrule=0.5pt,
+  sharp corners,
+  left=1.5mm,
+  right=1.5mm,
+  top=1mm,
+  bottom=1mm,
+  before skip=6pt,
+  after skip=6pt
+}
+
+\newtcolorbox{blockquotered}{
+  breakable,
+  colback=AEGISRed,
+  colframe=AEGISDarkRed,
+  boxrule=0.5pt,
+  sharp corners,
+  left=1.5mm,
+  right=1.5mm,
+  top=1mm,
+  bottom=1mm,
+  before skip=6pt,
+  after skip=6pt
+}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}%
+  \setlength{\parskip}{0pt}%
+}

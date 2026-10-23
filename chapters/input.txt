@@ -1,0 +1,10 @@
+\clearpage
+\appendix
+\chapter{Detector Review Presentation}
+
+\makeatletter
+\typeout{LATEX IS COMPILING FROM: \@currdir}
+\makeatother
+
+\includepdf[pages=-,pagecommand={},fitpaper=true]
+{slides.pdf}
